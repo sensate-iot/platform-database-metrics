@@ -1,0 +1,7 @@
+db.createCollection("Sensors")
+db.Sensors.createIndex({ _id: "hashed" })
+db.Sensors.createIndex({ Name: 1 })
+db.Sensors.createIndex({ Secret: 1 })
+db.Sensors.createIndex({ Owner: 1 })
+db.Sensors.createIndex({ CreatedAt: 1 })
+sh.shardCollection("SensateIoT.Sensors", { "_id": "hashed" })
