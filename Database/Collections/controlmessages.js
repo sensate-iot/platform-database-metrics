@@ -1,3 +1,3 @@
 db.createCollection("ControlMessages")
-db.ControlMessages.createIndex({ SensorId: "hashed" }, { expireAfterSeconds: 604800 })
-db.ControlMessages.createIndex({ Timestamp: 1 })
+db.ControlMessages.createIndex({ SensorId: "hashed" })
+db.ControlMessages.createIndex({ Timestamp: 1 }, { expireAfterSeconds: 604800 })
