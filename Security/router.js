@@ -3,8 +3,10 @@ db.createUser({
 	pwd: "",
 	roles: [
 		{
-			role: "read", db: "SensateIoT",
-			role: "read", db: "SensateStaging"
-		}
+			role: "read", db: "SensateIoT"
+		},
+                {
+                        role: "read", db: "SensateStaging"
+                }
 	]
 })
